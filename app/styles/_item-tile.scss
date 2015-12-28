@@ -1,0 +1,74 @@
+li[data-item="item"] {
+  clear: right;
+}
+.item {
+  border-bottom: 1px solid #ddd;
+  .place-bid {
+    margin: 0 0 2em 1em;
+    padding: 1em;
+    font-family: $main-font, Arial, sans-serif;
+    font-size: 100%;
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    border-radius: 1em;
+  }
+}
+.item-info {
+  padding: 0.667em;
+  h2 {
+    margin-top: 0;
+  }
+}
+.knit {
+  color: blue;
+}
+.sewn {
+  color: red;
+}
+.quilt {
+  color: green;
+}
+.paper {
+  color: orange;
+}
+.food {
+  color: purple;
+}
+.drink {
+  color: yellow;
+}
+.item-gallery {
+  width: 50%;
+  float: right;
+  margin: 0;
+  padding-right: 0.5em;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  figure {
+    max-width: 20%;
+    margin-top: 0.5em;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  figcaption {
+    font-size: 50%;
+    text-align: center;
+    // text-decoration: none;
+    color: #000;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 0.5em;
+    padding: 2px 2px 0 2px;
+  }
+}

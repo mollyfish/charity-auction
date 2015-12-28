@@ -1,0 +1,38 @@
+<article data-ng-controller="ItemsController" data-ng-init="getAll()">
+
+  <div data-ng-if="currentUser" class="new-item" data-item-form-directive
+    data-button-text="Save New Item"
+    data-form-name="newItemForm"
+    data-heading-text="Create A New Item"
+    data-item="newItem"
+    data-save="create(item)">
+  </div>
+
+  <section data-list-directive data-title="Items List:">
+    <ul id="errorsList">
+      <li data-ng-repeat="error in errors">{{error}}</li>
+    </ul>
+    <h1>Auction Items</h1>
+    <p data-ng-if="!currentUser">Checkboxes go here</p>
+    <ul id='itemlist' class="item-list">
+      <li data-ng-repeat="item in items" class="item">
+        <div data-item-directive data-item="item"></div>
+        <div class="edit-item" data-item-form-directive
+          data-ng-if="item.editing"
+          data-button-text="Save Edited Item"
+          data-form-name="edit{{item._id}}"
+          data-heading-text="Edit {{item.name}}"
+          data-item="item"
+          data-save="update(item)">
+          <button data-ng-click="item.editing = false; resetItem(item)">Cancel Item Edits</button>
+        </div>
+        
+        <button class="place-bid" data-ng-if="!currentUser && !item.editing" data-ng-click="bid(item)">Place a Bid</button>
+
+        <button data-ng-if="currentUser && !item.editing" data-ng-click="item.editing = true; rememberItem(item)">(edit this item)</button>
+        
+        <button data-ng-if="currentUser && !item.editing" data-ng-click="remove(item)">(murder this item)</button>
+      </li>
+    </ul>
+  </section>
+</article>

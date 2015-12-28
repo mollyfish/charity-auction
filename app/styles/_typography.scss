@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: local('Ubuntu'), url(https://fonts.gstatic.com/s/ubuntu/v8/zvCUQcxqeoKhyOlbifSAaevvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Ubuntu Bold';
+  font-weight: 700;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(https://fonts.gstatic.com/s/ubuntu/v8/0ihfXUL2emPh0ROJezvraJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Ubuntu Light';
+  font-weight: 300;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v8/_aijTyevf54tkVDLy-dlnJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Ubuntu Light Italic';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Ubuntu Light Italic'), local('Ubuntu-LightItalic'), url(https://fonts.gstatic.com/s/ubuntu/v8/DZ_YjBPqZ88vcZCcIXm6Vogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+}
+
+$main-font: 'Ubuntu';
+$main-font-bold: 'Ubuntu Bold';
+$main-font-light: 'Ubuntu Light';
+$main-font-italic: 'Ubuntu Light Italic';
+
+$jumbo-text: 5.063em;
+$large-text: 3.375em;
+$normal-text: 2.25em;
+$medium-text: 1.5em;
+$small-text: 1em;
+$tiny-text: 0.667em;

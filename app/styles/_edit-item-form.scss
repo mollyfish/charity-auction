@@ -1,0 +1,46 @@
+.edit-item {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 0 1em 1em 1em;
+  button {
+    margin-top: 1em;
+  }
+  .radios {
+    display: block;
+    border: none;
+    margin: 0.667em 0;
+    label {
+      margin-right: 1em;
+    }
+    input {
+      position: relative;
+      bottom: 2px;
+    }
+    #swim {
+      margin-left: 0;
+    }
+  }
+  .notes {
+    display: block;
+  }
+  label[for$="units"] {
+    margin-left: 1em;
+  }
+  label[for$="date"] {
+    display: block;
+    margin: 0.667em 0 3px 0;
+  }
+  label[for$="comments"] {
+    margin: 0.667em 0 3px 0;
+  }
+  input {
+    margin-bottom: 0.5em;
+    fieldset & {
+      display: inline;
+    }
+    &[type="number"] {
+       width: 5em;
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Challenge Auction</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body data-ng-app="AuctionApp">
+  <div data-ng-controller="AuthController" data-ng-init="getUser()">
+    <a href data-ng-if="currentUser" data-ng-click="logout()">
+      Log out {{currentUser}}
+    </a>
+    <main data-ng-view></main>
+  </div>
+  <script src="js/bundle.js"></script>
+</body>
+</html>

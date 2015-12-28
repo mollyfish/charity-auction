@@ -1,0 +1,61 @@
+<form name="{{formName}}" data-ng-submit="save({item: item})">
+  <h2>{{headingText}}</h2>
+  <h3>Category:</h3>
+  <fieldset class="radios">
+    <input type="radio" ng-model="item.category" name="category" id="{{item._id}}knit" value="knit">
+    <label for="{{item._id}}knit"> Knit Goods</label>
+    <input type="radio" ng-model="item.category" name="category" id="{{item._id}}sewn" value="sewn"> 
+    <label for="{{item._id}}sewn"> Sewn Goods</label>
+    <input type="radio" ng-model="item.category" name="category" id="{{item._id}}quilt" value="quilt">
+    <label for="{{item._id}}quilt"> Quilts</label>
+    <input type="radio" ng-model="item.category" name="category" id="{{item._id}}paper" value="paper">
+    <label for="{{item._id}}paper"> Paper Goods</label>
+    <input type="radio" ng-model="item.category" name="category" id="{{item._id}}food" value="food">
+    <label for="{{item._id}}food"> Edibles</label>
+    <input type="radio" ng-model="item.category" name="category" id="{{item._id}}drink" value="drink">
+    <label for="{{item._id}}drink"> Beverages</label>
+  </fieldset>
+  <fieldset class="text">
+    <label for="{{item._id}}title">Title:
+      <input type="text" id="{{item._id}}title" data-ng-model="item.title" placeholder="Title" />
+    </label>
+    <label for="{{item._id}}artist">Made By:
+      <input type="text" id="{{item._id}}artist" data-ng-model="item.artist" placeholder="Name" />
+    </label>
+    <label for="{{item._id}}colorway">Colorway:
+      <input type="text" id="{{item._id}}colorway" data-ng-model="item.colorway" placeholder="Color" />
+    </label>
+    <label for="{{item._id}}quantity">Quantity Available:
+      <input type="number" id="{{item._id}}quantity" data-ng-model="item.quantity"/>
+    </label>
+    <label for="{{item._id}}minBid">Minimum Suggested Donation:
+      <input type="number" id="{{item._id}}minBid" data-ng-model="item.minBid"/>
+    </label>
+    <label for="{{item._id}}currentBid">Current Bid:
+      <input type="number" id="{{item._id}}currentBid" data-ng-model="item.currentBid"/>
+    </label>
+    <label for="{{item._id}}winningBid">Winning Bid:
+      <input type="number" id="{{item._id}}winningBid" data-ng-model="item.winningBid"/>
+    </label>
+    <label class="notes" for="{{item._id}}materials">Materials:
+      <input class="notes" type="text" id="{{item._id}}materials" data-ng-model="item.materials" size="50" />
+    </label>
+    <label class="notes" for="{{item._id}}details">Details:
+      <input class="notes" type="text" id="{{item._id}}details" data-ng-model="item.details" size="50" />
+    </label>
+    <label class="notes" for="{{item._id}}img-0">Image Url:
+      <input class="notes" type="text" id="{{item._id}}img-0" data-ng-model="item.imgs[0]" />
+    </label>
+    <label class="notes" for="{{item._id}}img-1">Image Url:
+      <input class="notes" type="text" id="{{item._id}}img-1" data-ng-model="item.imgs[1]" />
+    </label>
+    <label class="notes" for="{{item._id}}img-2">Image Url:
+      <input class="notes" type="text" id="{{item._id}}img-2" data-ng-model="item.imgs[2]" />
+    </label>
+    <label class="notes" for="{{item._id}}img-3">Image Url:
+      <input class="notes" type="text" id="{{item._id}}img-3" data-ng-model="item.imgs[3]" />
+    </label>
+  </fieldset>
+  <button type="submit">{{buttonText}}</button>
+  <ng-transclude></ng-transclude>
+</form>

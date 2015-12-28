@@ -1,0 +1,16 @@
+<div class="item-gallery">
+  <figure data-ng-repeat="imgUrl in item.imgs"><a href="{{imgUrl}}" target="_blank"><img src="{{imgUrl}}" alt="Photo of {{item.title}}"><figcaption>click to enlarge</figcaption></a></figure>
+</div>
+<div class="item-info clearfix">
+  <h2>{{item.title | capitalize:true}}<span data-ng-if="item.colorway"> - {{item.colorway}}</span></h2>
+  <h3>{{item.artist | capitalize:true}}</h3>
+  <h3 data-ng-if="item.winningBid">CLOSED - this item is no longer available</h3>
+  <h4 data-ng-class="{'knit': item.category == 'knit', 'sewn': item.category == 'sewn', 'quilt': item.category == 'quilt', 'paper': item.category == 'paper', 'food': item.category == 'food', 'drink': item.category == 'drink'}">{{item.category | capitalize}}</h4>
+  <p data-ng-if="!item.currentBid && !item.winningBid">Suggested Minimum Donation: ${{item.minBid}}.00</p>
+  <p data-ng-if="item.currentBid">Current Bid: ${{item.currentBid}}.00</p>
+  <p data-ng-if="item.winningBid">Winning Bid: ${{item.winningBid}}.00</p>
+
+  <p>Materials: {{item.materials}}</p>
+  </ul>
+  <p>Details: {{item.details}}</p>
+</div>
