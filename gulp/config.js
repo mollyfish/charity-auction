@@ -11,7 +11,7 @@ module.exports = {
   webpackTest: {
     src: 'test/client/test_entry.js',
     dest: 'test/client/',
-    packedFile: 'test.bundle.js'
+    packedFile: 'test_bundle.js'
   },
   sass: {
     src: src + '/styles/**/*.{sass,scss}',
