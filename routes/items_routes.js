@@ -23,7 +23,6 @@ itemsRouter.get('/allitems', function(req, res) {
   });
 });
 
-// itemsRouter.post('/items', function(req, res) {
 itemsRouter.post('/items', eatAuth, function(req, res) {
   var newItem = new Item(req.body);
   newItem.save(function(err, data) {
@@ -33,7 +32,6 @@ itemsRouter.post('/items', eatAuth, function(req, res) {
   });
 });
 
-// itemsRouter.put('/items/:id', function(req, res) {
 itemsRouter.put('/items/:id', eatAuth, function(req, res) {
   var itemData = req.body;
   delete itemData._id;
@@ -44,7 +42,6 @@ itemsRouter.put('/items/:id', eatAuth, function(req, res) {
   });
 });
 
-// itemsRouter.delete('/items/:id', function(req, res) {
 itemsRouter.delete('/items/:id', eatAuth, function(req, res) {
   Item.remove({_id: req.params.id}, function(err) {
     if (err) return handleError(err, res);
