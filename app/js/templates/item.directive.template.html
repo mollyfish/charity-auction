@@ -1,5 +1,5 @@
 <div class="item-gallery">
-  <figure data-ng-repeat="imgUrl in item.imgs"><a href="{{imgUrl}}" target="_blank"><img src="{{imgUrl}}" alt="Photo of {{item.title}}"><figcaption>click to enlarge</figcaption></a></figure>
+  <figure data-ng-repeat="imgUrl in item.imgs"><a href="{{imgUrl}}" target="_blank"><img src="{{item.thumbs[$index]}}" alt="Photo of {{item.title}}"><figcaption>click to enlarge</figcaption></a></figure>
 </div>
 <div class="item-info clearfix">
   <h2>{{item.title | capitalize:true}}<span data-ng-if="item.colorway"> - {{item.colorway}}</span></h2>

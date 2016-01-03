@@ -11,7 +11,8 @@ var itemSchema = new mongoose.Schema({
   quantity: Number,
   materials: String,
   details: String,
-  imgs: {}
+  imgs: {},
+  thumbs: {}
 });
 
 module.exports = mongoose.model('Item', itemSchema);
