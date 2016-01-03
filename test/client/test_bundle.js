@@ -143,10 +143,6 @@
 	      templateUrl: '/views/item.view.html',
 	      controller: 'ItemsController'
 	    })
-	    // .when('/allitems', {
-	    //   templateUrl: '/views/all.items.html',
-	    //   controller: 'AllItemsController'
-	    // })
 	    .when('/signup', {
 	      templateUrl: '/views/auth.view.html',
 	      controller: 'SignupController'
@@ -30825,17 +30821,17 @@
 /* 18 */
 /***/ function(module, exports) {
 
-	var angular = window.angular;
-	module.exports = function(app) {
-	  app.controller('AllItemsController', ['$scope', '$http', function($scope, $http) {
-	    $http.get('/api/allitems')
-	    .then(function(res) {
-	      $scope.items = res.data;
-	    }, function(err) {
-	      console.log(err);
-	    })
-	  }]);
-	};
+	// var angular = window.angular;
+	// module.exports = function(app) {
+	//   app.controller('AllItemsController', ['$scope', '$http', function($scope, $http) {
+	//     $http.get('/api/allitems')
+	//     .then(function(res) {
+	//       $scope.items = res.data;
+	//     }, function(err) {
+	//       console.log(err);
+	//     })
+	//   }]);
+	// };
 
 
 /***/ },

@@ -32,10 +32,6 @@ auctionApp.config(['$routeProvider', function($route) {
       templateUrl: '/views/item.view.html',
       controller: 'ItemsController'
     })
-    // .when('/allitems', {
-    //   templateUrl: '/views/all.items.html',
-    //   controller: 'AllItemsController'
-    // })
     .when('/signup', {
       templateUrl: '/views/auth.view.html',
       controller: 'SignupController'

@@ -16,13 +16,13 @@ describe('item routes', function() {
   });
 
   it('should be able to create a item', function(done) {
-    var itemData = {name: 'test item'};
+    var itemData = {title: 'test title'};
     chai.request('localhost:3000')
       .post('/api/items')
       .send(itemData)
       .end(function(err, res) {
         expect(err).to.eql(null);
-        expect(res.body.name).to.eql('test item');
+        expect(res.body.title).to.eql('test title');
         expect(res.body).to.have.property('_id');
         done();
       });
